@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{%url 'fourth_task:update_inf'%}" method="post">
+      {% csrf_token %}
+      <p>
+      <label>Name</label>
+      <input type="text" name = "name" value="{{inf.employee_name}}">
+      </p>
+
+      <p>
+      <label>Job title</label>
+      <input type="text" name = "job_title" value="{{inf.job_title}}">
+      </p>
+
+      <p>
+      <label>Sex</label>
+      <input type="text" name = "sex" value="{{inf.sex}}">
+      </p>
+
+      <p>
+      <label>Department</label>
+      <input type="text" name = "department" value="{{inf.department}}">
+      </p>
+
+
+      <p>
+      <label>Email</label>
+      <input type="text" name = "email" value="{{inf.email}}">
+      </p>
+
+
+      <p>
+      <label>Phone</label>
+      <input type="text" name = "phone" value="{{inf.phone_number}}">
+      </p>
+
+      <p>
+      <label>Comment</label>
+          <textarea name="comment" cols="30" rows="10" maxlength="100" >{{inf.comment}}</textarea>
+      </p>
+      <input type="hidden" name="employee" value="{{inf.id}}">
+      <p>
+          <input type="submit" value="submit">
+      </p>
+
+  </form>
+</body>
+</html>

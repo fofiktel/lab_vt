@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <select name="employee" id="">
+    {% for inf in inf_list%}
+        <option value="{{inf.id}}">{{inf.employee_name}}</option>
+    {%endfor%}
+
+
+     <input type="submit" formaction="{%url 'fourth_task:delete_employee'%}" value="delete">
+     <input type="submit" formaction="{%url 'fourth_task:update_form'%}" value = "update"></p>
+
+
+
+</select>
+    <p><a href="{% url 'second_task:form'%}">Add new employee</a></p>
+</form>
+</body>
+</html>

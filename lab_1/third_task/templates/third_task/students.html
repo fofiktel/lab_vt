@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for s in student_list%}
+        <li><a href="{% url 'third_task:student' s.id%}">Студент {{s.student_name}}</a></li>
+        {%endfor%}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <form action="{% url 'second_task:add_employee'%}" method="post">
+      {% csrf_token %}
+      <p>
+      <label>Name</label>
+      <input type="text" name = "name">
+      </p>
+
+      <p>
+      <label>Job title</label>
+      <input type="text" name = "job_title">
+      </p>
+
+      <p>
+      <label>Sex</label>
+      <input type="text" name = "sex">
+      </p>
+
+      <p>
+      <label>Department</label>
+      <input type="text" name = "department">
+      </p>
+
+
+      <p>
+      <label>Email</label>
+      <input type="text" name = "email">
+      </p>
+
+
+      <p>
+      <label>Phone</label>
+      <input type="text" name = "phone">
+      </p>
+
+      <p>
+      <label>Comment</label>
+          <textarea name="comment" cols="30" rows="10" maxlength="100"></textarea>
+      </p>
+
+      <p>
+          <input type="submit" value="submit">
+      </p>
+
+  </form>
+</div>
+</body>
+</html>
